@@ -23,6 +23,7 @@
     "@opencode/plugin": "2.0.32",
     "@types/node": "26.6.6",
     "esbuild": "0.28.2",
+    "jsonc-parser": "3.3.1",
     "tar": "7.5.22",
     "typescript": "5.8.2"
   }
