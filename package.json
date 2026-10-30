@@ -1,0 +1,29 @@
+{
+  "name": "opencode-plannotator-patch",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Repackage a pinned Plannotator release with terminal plan review, without its monorepo",
+  "license": "MIT OR Apache-2.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "fetch:upstream": "node scripts/fetch-upstream.mjs",
+    "assemble": "node scripts/assemble.mjs",
+    "package": "npm run assemble && node scripts/package.mjs",
+    "check": "tsc --noEmit",
+    "test": "npm run package && node --test tests/*.test.mjs"
+  },
+  "distribution": {
+    "name": "@cardinal4/opencode-plannotator",
+    "version": "0.28.38-tui.1"
+  },
+  "devDependencies": {
+    "@opencode/plugin": "2.0.32",
+    "@types/node": "26.6.6",
+    "esbuild": "0.28.2",
+    "tar": "7.5.22",
+    "typescript": "5.8.2"
+  }
+}
